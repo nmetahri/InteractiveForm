@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Interactive Form</title>
+</head>
+<body class="flex">
+    <div id="form_page_container" class="flex">
+        <div id="form_page_container_header">
+            <h2>Informations</h2>
+        </div>
+        <div id="form_container" class="flex">
+            <div id="left_form" class="flex">
+                <form id="register_form" class="flex">
+                    
+                    <label for="lastname" >Nom complet</label>
+                    <input class="inputs" type="text" id="fullname" name="fullname" placeholder="Nom prenom..." maxLength="40"> 
+                    
+                    <div>
+                        <label for="firstname">ID</label>
+                        <button type="button" id="auto_get_id">auto</button> 
+                    </div>
+                    <input class="inputs" type="text" id="id" name="id"  placeholder="username..." maxLength="20">
+                    
+                    <label for="country">Pays</label>
+                    <select name="country" id="country">
+                        <option selected disabled>Choississez un pays</option>
+                        <option value="213">Algérie</option>
+                        <option value="32">Belgique</option>
+                        <option value="33">France</option>
+                    </select>
+
+                    <label for="phone">Téléphone</label>
+                    <input class="inputs" type="number" id="phone" name="phone" placeholder="06********" maxLength="10">
+                    
+                    <label for="mail">Adresse mail (*)</label>
+                    <input class="inputs" type="email" id="email" name="mail" pattern=".+@gmail\.com" placeholder="example@gmail.com" size="30" required>
+                    
+                    <label for="password">Mot de passe (*)</label>
+                    <input class="inputs" type="password" id="password" name="password" placeholder="*****" maxLength="20" required>
+                </form>
+            </div>
+            <div id="right_form" class="flex">
+                <div id="card" class="flex">
+                    <div id="card_header" class="flex">
+                        <p id="card_id">...</p>
+                    </div>
+                    <div id="card_middle" class="flex">
+                    <p id="card_name">...</p>
+                    </div>
+                    <div id="card_footer" class="flex">
+                        <p id="card_phone_country">(+...)</p>
+                        <p id="card_phone">...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="form_page_container_footer" class="flex">
+            <button id="submit_btn" type="submit" form="register_form" class="form_buttons">Register</button>
+            <button id="reset_btn" type="reset" form="register_form" class="form_buttons">Reset</button>
+        </div>
+    </div>
+    <script src="scripts/form.js"></script>
+</body>
+</html>
