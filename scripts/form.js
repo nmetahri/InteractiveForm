@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	
 	function getID(){
-		let url = "http://web.gregory-bourguin.fr/teaching/php/requests/ajax/02_generateUserID.php"
+		let url = "https://web.gregory-bourguin.fr/teaching/php/requests/ajax/02_generateUserID.php"
 		
         let data = new FormData()
         data.append('firstname', prenom)
